@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">trail of history</string>
+    <string name="app_name">Trail of History</string>
+    <string name="titleHint">Title</string>
+    <string name="descriptionHint">Description</string>
 </resources>
