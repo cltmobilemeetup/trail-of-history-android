@@ -3,23 +3,25 @@ package org.charmeck.trailofhistory.ui.main;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
-import com.jakewharton.rxbinding.widget.RxTextView;
+import java.util.ArrayList;
 import javax.inject.Inject;
 import org.charmeck.trailofhistory.R;
 import org.charmeck.trailofhistory.TrailOfHistoryApp;
 import org.charmeck.trailofhistory.data.api.Results;
 import org.charmeck.trailofhistory.data.api.TrailOfHistoryService;
+import org.charmeck.trailofhistory.poi.PointOfInterestAdapter;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
 public class MainActivity extends AppCompatActivity {
 
-  @Bind(R.id.tv_results) TextView resultsView;
+  @Bind(R.id.recyclerView) RecyclerView recyclerView;
+  PointOfInterestAdapter poiAdapter;
 
   @Inject TrailOfHistoryService tohService;
 
@@ -35,16 +37,26 @@ public class MainActivity extends AppCompatActivity {
 
     ButterKnife.bind(this);
 
+    recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    poiAdapter = new PointOfInterestAdapter(new ArrayList<>());
+    recyclerView.setAdapter(poiAdapter);
+
     subscriptions = new CompositeSubscription();
+
+    fetchStatues();
   }
 
-  @OnClick(R.id.btn_requestData) public void fetchStatues() {
+  public void fetchStatues() {
     tohService.statues()
         .filter(Results.isSuccess())
         .map(stringResult -> stringResult.response().body())
+        .flatMapIterable(pointOfInterests -> pointOfInterests)
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(RxTextView.text(resultsView), throwable -> {
+        .subscribe(pointOfInterest -> {
+          poiAdapter.addPointOfIntrest(pointOfInterest);
+          poiAdapter.notifyDataSetChanged();
+        }, throwable -> {
           throw new RuntimeException(throwable);
         });
   }
