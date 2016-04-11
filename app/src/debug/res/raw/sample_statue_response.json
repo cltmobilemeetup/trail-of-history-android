@@ -1,92 +1,59 @@
 [
   {
     "name": "Julius Chambers",
-    "id": "1233",
-    "description": "fdflkjdsf",
-    "icon": "fgjlsfd",
+    "description": "Julius LeVonne Chambers (October 6, 1936 – August 2, 2013) was an American lawyer, civil rights leader and educator.",
+    "icon": "https://static01.nyt.com/images/2013/08/07/us/CHAMBERS-obit/CHAMBERS-obit-blog427.jpg",
     "photos": [
-      "sdgs",
-      "sdgsdg"
+      "https://img.washingtonpost.com/rw/2010-2019/WashingtonPost/2013/08/04/Obituaries/Images/Obit_Julius_Chambers-0c387.jpg"
     ]
   },
   {
     "name": "Jane Wilkes",
-    "id": "1233",
-    "description": "fdflkjdsf",
-    "icon": "fgjlsfd",
-    "photos": [
-      "sdgs",
-      "sdgsdg"
-    ]
+    "description": "Jane Renwick Smedberg Wilkes was born on November 22, 1827, in New York City and moved to Charlotte shortly after her marriage to John Wilkes in the spring of 1854.",
+    "icon": "http://charmeck.org/mecklenburg/county/ParkandRec/TrailOfHistory/PublishingImages/Jane_Wilkes_web.jpg"
   },
   {
     "name": "William Henry Belk",
-    "id": "1234",
     "latitude": 35.212547,
     "longitude": -80.83627,
-    "description": "fdflkjdsf",
-    "icon": "fgjlsfd",
+    "description": "Starting from a small dry goods store in Monroe, North Carolina, William Henry Belk opened retail stores in Charlotte and other communities across the southeast from the end of the nineteenth-century through the mid twentieth-century.",
+    "icon": "http://charmeck.org/mecklenburg/county/ParkandRec/TrailOfHistory/PublishingImages/Young%20William%20Henry%20Belk_web.jpg",
     "photos": [
-      "sdgs",
-      "sdgsdg"
+      "http://charmeck.org/mecklenburg/county/ParkandRec/TrailOfHistory/PublishingImages/WH%20Belk%20portrait%201920s-30s_web.jpg"
     ]
   },
   {
     "name": "Thaddeus Tate",
-    "id": "1235",
     "latitude": 35.212177,
     "longitude": -80.836235,
-    "description": "fdflkjdsf",
-    "icon": "fgjlsfd",
+    "description": "A prominent African American businessman and civic leader, Thaddeus (Thad) Lincoln Tate made a significant contribution to the Charlotte community in the early to mid twentieth-century.",
+    "icon": "http://charmeck.org/mecklenburg/county/ParkandRec/TrailOfHistory/PublishingImages/Thad_Tate_Family_web.jpg",
     "photos": [
-      "sdgs",
-      "sdgsdg"
+      "http://charmeck.org/mecklenburg/county/ParkandRec/TrailOfHistory/PublishingImages/Thad_Tate_web.jpg"
     ]
   },
   {
-    "name": "Capt. Jack",
-    "id": "1236",
+    "name": "Captain Jack",
     "latitude": 35.21687,
     "longitude": -80.8327,
-    "description": "fdflkjdsf",
-    "icon": "fgjlsfd",
-    "photos": [
-      "sdgs",
-      "sdgsdg"
-    ]
+    "description": "On May 19, 1775 a rider raced into Charlottetowne with news of the massacre of colonists by the British at the Battle of Concord and Lexington. ",
+    "icon": "http://carolinabronze.com/wp-content/uploads/2012/05/Capt.Jack-final3-203x300.jpg"
   },
   {
-    "name": "Chief And Settler",
-    "id": "1237",
+    "name": "Thomas Spratt and King Haigler",
     "latitude": 35.22006,
     "longitude": -80.83041,
-    "description": "fdflkjdsf",
-    "icon": "fgjlsfd",
-    "photos": [
-      "sdgs",
-      "sdgsdg"
-    ]
+    "description": "Thomas “Kanawha” Spratt was among the earliest settlers in this part of the Carolinas. His father, also named Thomas Spratt, purchased land on Twelve Mile Creek, near present-day Fort Mill, SC, in 1750 and later added two plantations. ",
+    "icon": "http://charmeck.org/mecklenburg/county/ParkandRec/TrailOfHistory/PublishingImages/Thomas%20Spratt%20and%20King%20Haigler.jpg"
   },
   {
     "name": "Thomas Polk",
-    "id": "1238",
     "latitude": 35.21912,
     "longitude": -80.82952,
-    "description": "fdflkjdsf",
-    "icon": "fgjlsfd",
+    "description": "Thomas Polk, one of the earliest settlers of Mecklenburg County, was a trained surveyor, a prosperous planter, and a local leader.",
+    "icon": "http://charmeck.org/mecklenburg/county/ParkandRec/TrailOfHistory/PublishingImages/ThomasPolk_vert.jpg",
     "photos": [
-      "sdgs",
-      "sdgsdg"
-    ]
-  },
-  {
-    "name": "James B Duke",
-    "id": "1239",
-    "description": "fdflkjdsf",
-    "icon": "fgjlsfd",
-    "photos": [
-      "sdgs",
-      "sdgsdg"
+      "http://charmeck.org/mecklenburg/county/ParkandRec/TrailOfHistory/PublishingImages/ThomasPolk_web.jpg"
     ]
   }
 ]
