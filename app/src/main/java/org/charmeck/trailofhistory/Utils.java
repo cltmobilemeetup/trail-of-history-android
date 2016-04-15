@@ -12,7 +12,7 @@ public class Utils {
   private Utils() {
   }
 
-  public static final String rawResouseAsString(Context context, @RawRes int resId) {
+  public static final String rawResourseAsString(Context context, @RawRes int resId) {
     InputStream inputStream = context.getResources().openRawResource(resId);
     BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
     StringBuilder builder = new StringBuilder();

@@ -1,5 +1,6 @@
 package org.charmeck.trailofhistory.ui.main;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -47,18 +48,22 @@ public class MainActivity extends AppCompatActivity {
   }
 
   public void fetchStatues() {
-    tohService.statues()
+    final ProgressDialog progressDialog =
+        ProgressDialog.show(this, "Fetching Statues", "Loading...");
+
+    subscriptions.add(tohService.statues()
         .filter(Results.isSuccess())
         .map(stringResult -> stringResult.response().body())
         .flatMapIterable(pointOfInterests -> pointOfInterests)
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(pointOfInterest -> {
-          poiAdapter.addPointOfIntrest(pointOfInterest);
-          poiAdapter.notifyDataSetChanged();
-        }, throwable -> {
-          throw new RuntimeException(throwable);
-        });
+        .subscribe(pointOfInterest -> poiAdapter.addPointOfIntrest(pointOfInterest), //
+            throwable -> {
+              throw new RuntimeException(throwable);
+            }, () -> {
+              progressDialog.dismiss();
+              poiAdapter.notifyDataSetChanged();
+            }));
   }
 
   @Override protected void onDestroy() {
