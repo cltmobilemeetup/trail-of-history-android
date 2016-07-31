@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="org.charmeck.trailofhistory.ranger.NewPointOfInterestActivity">
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nameInputLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:id="@+id/poiname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_name"
+            android:paddingBottom="10dp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:theme="@style/ThemeOverlay.MyDarkButton" />
+
+
+</LinearLayout>

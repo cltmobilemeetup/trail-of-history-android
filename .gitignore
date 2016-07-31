@@ -2,6 +2,7 @@
 gen/
 build/
 local.properties
+google-services.json
 # Old Android
 bin/
 
