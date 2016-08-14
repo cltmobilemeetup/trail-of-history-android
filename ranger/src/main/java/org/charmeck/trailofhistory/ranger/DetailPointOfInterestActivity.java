@@ -25,6 +25,7 @@ public class DetailPointOfInterestActivity extends AppCompatActivity {
     public static Intent newInstance(Context context, PointOfInterest pointOfInterest){
         Intent intent =  new Intent(context, DetailPointOfInterestActivity.class);
         intent.putExtra(KEY_POI, pointOfInterest);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // Control Up/Back flow to List
 
         return intent;
     }
