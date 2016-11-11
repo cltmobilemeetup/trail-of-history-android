@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/Masala</color>
+    <color name="colorPrimary">#795548</color>
     <color name="colorPrimaryDark">@color/Tango</color>
-    <color name="colorAccent">@color/Tango</color>
+    <color name="colorAccent">#ffb74d</color>
+    <color name="colorTitle">#FFFFFF</color>
+    <color name="colorToolbar">#795548</color>
+    <color name="colorAssets">#ffb74d</color>
     <color name="Masala">#3E3B34</color>
     <color name="Tango">#D16E3B</color>
 </resources>

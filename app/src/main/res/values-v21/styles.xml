@@ -11,7 +11,7 @@
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:statusBarColor">@color/colorAccent</item><item name="android:textColorPrimary">@color/colorTitle</item>
 
     </style>
 

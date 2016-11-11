@@ -3,9 +3,12 @@ package org.charmeck.trailofhistory;
 import android.app.ProgressDialog;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.google.android.gms.maps.CameraUpdate;
@@ -35,7 +38,7 @@ import timber.log.Timber;
  *
  * Created by Chris on 10/24/16.
  */
-public class MapActivity extends FragmentActivity
+public class MapActivity extends AppCompatActivity
     implements OnMapReadyCallback, OnMarkerClickListener {
 
   private static final String TAG = MapActivity.class.getSimpleName();
@@ -61,6 +64,8 @@ public class MapActivity extends FragmentActivity
 
   @BindView(R.id.view_pager) ViewPager viewPager;
 
+  @BindView(R.id.toolbar) Toolbar toolbar;
+
   /***************************************
    * Lifecycle Methods
    ***************************************/
@@ -76,10 +81,35 @@ public class MapActivity extends FragmentActivity
 
     ButterKnife.bind(this);
 
+    setSupportActionBar(toolbar);
+    getSupportActionBar().setDisplayShowTitleEnabled(false);
+
     // Obtain the SupportMapFragment and get notified when the map is ready to be used.
     SupportMapFragment mapFragment =
         (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
     mapFragment.getMapAsync(this);
+  }
+
+  @Override public boolean onCreateOptionsMenu(Menu menu) {
+    Timber.tag(TAG).d("onCreateOptionsMenu");
+    getMenuInflater().inflate(R.menu.menu_map_view, menu);
+    return true;
+  }
+
+  @Override public boolean onOptionsItemSelected(MenuItem item) {
+    Timber.tag(TAG).d("onOptionsItemSelected");
+    switch (item.getItemId()) {
+      case R.id.option_view:
+        onBackPressed();
+        return true;
+    }
+
+    return super.onOptionsItemSelected(item);
+  }
+
+  @Override public void onBackPressed() {
+    Timber.tag(TAG).d("onBackPressed");
+    finish();
   }
 
   @Override protected void onStart() {
